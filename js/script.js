@@ -8,13 +8,12 @@ function eliminar(valor) {
     var fin = document.getElementById("fin");
     var presionar = document.getElementById("presionar");
     var restart = document.getElementById("restart");
+    var figura = document.getElementById("figura");
     
-    console.log('div '+elegido);
     for(i=0; i<elementos.length; i++) {
         if(valor == elementos[i]) {
             if(valor == elegido) {
                 bien.src = "src/"+valor+".mp3";
-                console.log("se borra "+valor);
                 elementos.splice(i,1);
 
                 var id = document.getElementById(valor);
@@ -22,20 +21,21 @@ function eliminar(valor) {
                 id.style.cursor = "not-allowed";
                 
                 var random = Math.floor(Math.random() * (elementos.length - 1));
-                console.log(random);
                 elegido = elementos[random];
                 
                 bien.play();
                 
                 if(elementos.length == 0) {
                     setTimeout(function(){
+                        figura.setAttribute('class', elegido);
                         presionar.innerHTML = "Has ganado !!";
                         restart.setAttribute('class', 'ghost-button restart');
                         fin.play();
-                    }, 2500);
+                    }, 1800);
                 }else {
                     setTimeout(function(){
-                       presionar.innerHTML = elegido;
+                        presionar.innerHTML = elegido;
+                        figura.setAttribute('class', elegido);
                     },1000);
                 }
                 break;
@@ -47,13 +47,13 @@ function eliminar(valor) {
             continue;
         }
     }
-    console.log(elementos);
 }
 
 function init() {
     var present = document.getElementById("presentacion");
     var contb = document.getElementById("containerb");
     var presionar = document.getElementById("presionar");
+    var figura = document.getElementById("figura");
     
     var random = Math.floor(Math.random() * (elementos.length - 1));
     present.setAttribute('class', 'animated fadeOut');
@@ -62,6 +62,7 @@ function init() {
         present.setAttribute('class', 'ocultar');
         contb.setAttribute('class', 'containerb');
         elegido = elementos[random];
+        figura.setAttribute('class', elegido);
         presionar.innerHTML = elegido;
     }, 1000);
 }

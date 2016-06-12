@@ -6,6 +6,7 @@
 body {
     background-image: url(../img/fondo.jpg);
     font-family: "Roboto", helvetica, arial, sans-serif;
+    min-width: 50%;
 }
 
 .container {
@@ -50,16 +51,12 @@ body {
 
 .right {
     flex: 1 1 150px;
-    margin-bottom: 10px;
+    margin-bottom: 250px;
 }
 
 .box {
     width: 100%;
     height: 50px;
-}
-
-.box table {
-    width: 100%;
 }
 
 .table-fill {
@@ -122,7 +119,7 @@ body {
 .table-fill td {
     background: #FFFFFF;
     padding: 20px;
-    text-align: left;
+    margin: 0 auto;
     vertical-align: middle;
     font-weight: 300;
     text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
@@ -160,10 +157,14 @@ body {
 #tabla {
     width: 100%;
     height: 100%;
+    background-image: url(../img/marco.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 40px 20px;
 }
 
 #tabla img {
-    width: 200px;
+    width: 150px;
     cursor: pointer;
 }
 
@@ -210,6 +211,8 @@ body {
 }
 
 .restart {
+    width: 80%;
+    height: 100px;
     color: #443EFF;
     background-color: #9E9BFF;
     border: 2px solid #9E9BFF;
@@ -223,4 +226,149 @@ body {
 
 .ocultar{
     display: none;
+}
+
+/* Figuras */
+.cuadrado {
+	width: 100px;
+	height: 100px;
+	background: #E289FA;
+    margin: 0 auto;
+}
+
+.rectangulo {
+	width: 150px;
+	height: 100px;
+	background: #E289FA;
+    margin: 0 auto;
+}
+
+.circulo {
+	width: 100px;
+	height: 100px;
+	background: #E289FA;
+	-moz-border-radius: 50px;
+	-webkit-border-radius: 50px;
+	border-radius: 50px;
+    margin: 0 auto;
+}
+
+.triangulo {
+	width: 0;
+	height: 0;
+	border-left: 50px solid transparent;
+	border-right: 50px solid transparent;
+	border-bottom: 100px solid #E289FA;
+    margin: 0 auto;
+}
+
+.trapecio {
+    margin: 0 auto;
+	border-bottom: 100px solid #E289FA;
+	border-left: 50px solid transparent;
+	border-right: 50px solid transparent;
+	height: 0;
+	width: 100px;
+}
+
+.pentagono {
+    position: relative;
+    width: 54px;
+    border-width: 50px 18px 0;
+    border-style: solid;
+    border-color: #E289FA transparent;
+    margin: 30px auto 0;
+}
+.pentagono:before {
+    content: "";
+    position: absolute;
+    height: 0;
+    width: 0;
+    top: -85px;
+    left: -18px;
+    border-width: 0 45px 35px;
+    border-style: solid;
+    border-color: transparent transparent #E289FA;
+}
+
+.hexagono {
+    margin: 20px auto;
+	width: 100px;
+	height: 55px;
+	background: #E289FA;
+	position: relative;
+}
+.hexagono:before {
+	content: "";
+	position: absolute;
+	top: -25px;
+	left: 0;
+	width: 0;
+	height: 0;
+	border-left: 50px solid transparent;
+	border-right: 50px solid transparent;
+	border-bottom: 25px solid #E289FA;
+}
+.hexagono:after {
+	content: "";
+	position: absolute;
+	bottom: -25px;
+	left: 0;
+	width: 0;
+	height: 0;
+	border-left: 50px solid transparent;
+	border-right: 50px solid transparent;
+	border-top: 25px solid #E289FA;
+}
+
+.octagono {
+	width: 100px;
+	height: 100px;
+	background: #E289FA;
+	position: relative;
+    margin: 0 auto;
+}
+
+.octagono:before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	border-bottom: 29px solid #E289FA;
+	border-left: 29px solid #FFFFFF;
+	border-right: 29px solid #FFFFFF;
+	width: 42px;
+	height: 0;
+}
+
+.octagono:after {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	border-top: 29px solid #E289FA;
+	border-left: 29px solid #FFFFFF;
+	border-right: 29px solid #FFFFFF;
+	width: 42px;
+	height: 0;
+}
+
+.rombo {
+	width: 0;
+	height: 0;
+	border: 50px solid transparent;
+	border-bottom-color: #E289FA;
+	position: relative;
+	top: -50px;
+    margin: 0 auto;
+}
+.rombo:after {
+	content: '';
+	position: absolute;
+	left: -50px;
+	top: 50px;
+	width: 0;
+	height: 0;
+	border: 50px solid transparent;
+	border-top-color: #E289FA;
 }
