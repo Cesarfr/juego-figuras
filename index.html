@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Juego Figuras</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <script type="text/javascript" src="js/script.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="titulo">
+            <h1>Bienvenido al mundo figuras</h1>
+        </div>
+        <div class="centro">
+            <div class="presentacion" id="presentacion">
+                <button id="start" class="ghost-button" onclick="init()">Iniciar</button>
+                <br>
+                <button id="inst" class="ghost-button inst" onclick="presentacion()">Escuchar instrucciones</button>
+                <br>
+                <img src="img/static.gif" alt="animado" id="gif" class="ocultar">
+                <audio src="src/inicio.mp3" id="present"></audio>
+            </div>
+            <br>
+            <div class="ocultar" id="containerb">
+                <div class="right">
+                    <div class="box">
+                        <table class="table-fill">
+                            <tr>
+                                <th>Presiona la siguiente figura</th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div id="presionar"></div>
+                                </td>
+                            </tr>
+                        </table><br>
+                        <button class="ocultar" id="restart" onclick="reiniciar()">Reiniciar</button>
+                    </div>
+                </div>
+                <br>
+                <div class="left">
+                    <table id="tabla">
+                        <tr>
+                            <td><img src="img/circulo.png" alt="circulo" id="circulo" onclick="eliminar(this.id)" onmouseover="hover(this.id)"></td>
+                            <td><img src="img/cuadrado.png" alt="cuadrado" id="cuadrado" onclick="eliminar(this.id)" onmouseover="hover(this.id)"></td>
+                            <td><img src="img/hexagono.png" alt="hexagono" id="hexagono" onclick="eliminar(this.id)" onmouseover="hover(this.id)"></td>
+                        </tr>
+                        <tr>
+                            <td><img src="img/octagono.png" alt="octagono" id="octagono" onclick="eliminar(this.id)" onmouseover="hover(this.id)"></td>
+                            <td><img src="img/pentagono.png" alt="pentagono" id="pentagono" onclick="eliminar(this.id)" onmouseover="hover(this.id)"></td>
+                            <td><img src="img/rectangulo.png" alt="rectangulo" id="rectangulo" onclick="eliminar(this.id)" onmouseover="hover(this.id)"></td>
+                        </tr>
+                        <tr>
+                            <td><img src="img/rombo.png" alt="rombo" id="rombo" onclick="eliminar(this.id)" onmouseover="hover(this.id)"></td>
+                            <td><img src="img/trapecio.png" alt="trapecio" id="trapecio" onclick="eliminar(this.id)" onmouseover="hover(this.id)"></td>
+                            <td><img src="img/triangulo.png" alt="triangulo" id="triangulo" onclick="eliminar(this.id)" onmouseover="hover(this.id)"></td>
+                        </tr>
+                    </table>
+                    <audio src="src/cuac.wav" id="error"></audio>
+                    <audio id="bien"></audio>
+                    <audio src="src/fin.mp3" id="fin"></audio>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <footer>Realizado por: Cesar Hernandez Antonio - 9ITI1</footer>
+        </div>
+    </div>
+</body>
+
+</html>
